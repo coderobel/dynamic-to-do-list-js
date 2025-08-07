@@ -21,4 +21,10 @@ document.addEventListener('DOMContentLoaded', function () {
         taskList.appendChild(task);
         taskInput.value = "";
     };
+    addButton.addEventListener('click', addTask);
+    taskInput.addEventListener('keypress',function (event) {
+    if (event.key === "Enter") {
+        addTask();
+    }
+  });
 });
